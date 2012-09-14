@@ -60,4 +60,4 @@ echo "Generating a secret to demonstrate your identity to the coordinator..."
 ./tools/gen_passwd.py
 echo
 
-echo "Done! Continue following along in docs/README."
+echo "Done! Continue following along in README."
