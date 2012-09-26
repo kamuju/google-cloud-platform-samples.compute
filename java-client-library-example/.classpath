@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/google-api-client-1.11.0-beta.jar"/>
+	<classpathentry kind="lib" path="libs/google-api-services-compute-v1beta12-rev4-1.8.0-beta.jar"/>
+	<classpathentry kind="lib" path="libs/google-oauth-client-1.11.0-beta.jar"/>
+	<classpathentry kind="lib" path="libs/guava-11.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="libs/google-http-client-gson-1.11.0-beta.jar"/>
+	<classpathentry kind="lib" path="libs/google-http-client-jackson-1.11.0-beta.jar"/>
+	<classpathentry kind="lib" path="libs/httpclient-4.0.3.jar"/>
+	<classpathentry kind="lib" path="libs/httpcore-4.0.1.jar"/>
+	<classpathentry kind="lib" path="libs/jackson-core-asl-1.9.9.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
