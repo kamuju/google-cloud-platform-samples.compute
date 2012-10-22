@@ -7,10 +7,10 @@ project = 'YOUR_PROJECT_ID'
 
 # Constants for use as request parameters.
 BASE_URL = 'https://www.googleapis.com/compute/v1beta12/projects/'
-API_VERSION = 'v1beta12'
+API_VERSION = 'v1beta13'
 DEFAULT_PROJECT = project
 GOOGLE_PROJECT = 'google'
-DEFAULT_NAME = 'new-node-ruby'
+DEFAULT_INSTANCE_NAME = 'new-node-ruby'
 DEFAULT_IMAGE = BASE_URL + GOOGLE_PROJECT + '/images/ubuntu-12-04-v20120912'
 DEFAULT_ZONE = BASE_URL + DEFAULT_PROJECT + '/zones/us-east1-a'
 DEFAULT_MACHINE = BASE_URL + DEFAULT_PROJECT + '/machine-types/n1-standard-1'
@@ -58,7 +58,7 @@ api_request_parameter_map = {
     'project' => DEFAULT_PROJECT
   },
   compute.instances.get => {
-    'instance' => DEFAULT_NAME,
+    'instance' => DEFAULT_INSTANCE_NAME,
     'project' => DEFAULT_PROJECT
   },
   compute.instances.insert => {
@@ -69,9 +69,9 @@ api_request_parameter_map = {
 # Linking each API request to an appropriate request body.
 api_request_body_map = {
   compute.instances.insert => {
-    'name' => DEFAULT_NAME,
+    'name'  => DEFAULT_INSTANCE_NAME,
     'image' => DEFAULT_IMAGE,
-    'zone' => DEFAULT_ZONE,
+    'zone'  => DEFAULT_ZONE,
     'machineType' => DEFAULT_MACHINE,
     'networkInterfaces' => [{ 'network' => DEFAULT_NETWORK }]
   }

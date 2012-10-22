@@ -27,6 +27,9 @@ the sample application.
     - google-api-client
     - thin
     - launchy
+    - highline
+- If you haven't installed the above gems, try this:
+    - 'sudo gem install google-api-client thin launchy highline'
 - The google-api-ruby-client library checked out locally, and this sample
   application running from inside of that repo.
 
@@ -41,8 +44,12 @@ the sample application.
     - Select "Other" under "Installed application type"
     - Click "Create client ID"
 
-Edit the client_secrets.json file and enter the client ID and secret that you
-retrieved from the API Console.
+  2) Run 'cp client_secrets.json.sample client_secrets.json'
+    - Edit the client_secrets.json file and enter the client ID and secret that
+    you retrieved from the API Console.
+
+  3) Edit 'YOUR_PROJECT_ID' in sample.rb to reflect your Google Compute Engine
+  project name.
 
 ## Running the Sample Application
 1. Run the application
