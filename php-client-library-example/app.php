@@ -46,7 +46,7 @@ $project = 'YOUR_GOOGLE_COMPUTE_ENGINE_PROJECT';
 /**
  * Constants for sample request parameters.
  */
-define('API_VERSION', 'v1beta12');
+define('API_VERSION', 'v1beta13');
 define('BASE_URL', 'https://www.googleapis.com/compute/'.
   API_VERSION . '/projects/');
 define('GOOGLE_PROJECT', 'google');
