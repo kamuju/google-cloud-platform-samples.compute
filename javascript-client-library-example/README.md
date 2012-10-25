@@ -19,24 +19,24 @@ This is a simple web-based example of calling the Google Compute Engine API
 in JavaScript.
 
 ## Setup Authentication
+  NOTE: This README assumes that you have enabled access to the Google Compute
+  Engine API via the Google API Console page.
+
   1) Visit https://code.google.com/apis/console/?api=compute to register your
   application.
-    - From the "Project Home" screen, activate access to "Google Compute Engine
-    API".
     - Click on "API Access" in the left column
-    - Click the button labeled "Create an OAuth2 client ID"
+    - Click the button labeled "Create an OAuth2 client ID..." if you have not
+      generated any client IDs, or "Create another client ID..." if you have
     - Give your application a name and click "Next"
     - Select "Web Application" as the "Application type"
     - Click "Create client ID"
-    - Click "Edit..." for your new client ID
-    - Under the callback URL, enter the location of your JavaScript application.
+    - Click "Edit settings..." for your new client ID
+    - Under the redirect URI, enter the location of your JavaScript application
+    - Add a JavaScript origin that corresponds to the domain from where you will
+      be running the script
+    - Click "Update"
 
-  2) Update app.html with the redirect uri, consumer key, secret, and
-  developer key obtained in step 1.
-    - Update 'YOUR_CLIENT_ID' with your oauth2 client id.
-    - Update 'YOUR_API_KEY' with your developer key.
-    This is listed under "Simple API Access" at the very bottom in the Google
-    API Console.
+  2) Update the following in app.html (projectId, clientId, apiKey).
 
 ## Running the Sample Application
   3) Load app.html on your web server, and visit the appropriate website in

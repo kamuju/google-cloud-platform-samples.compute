@@ -27,15 +27,15 @@
     <script src="https://apis.google.com/js/client.js"></script>
     <script type="text/javascript">
     /**
-     * The name of your Google Compute Engine Project.
+     * Your project ID, found in the API Console -> Overview -> Project ID
      */
-    var project = 'YOUR_GOOGLE_COMPUTE_ENGINE_PROJECT';
+    var projectId = 'YOUR_GOOGLE_COMPUTE_ENGINE_PROJECT';
 
     /**
-     * Enter a client ID for a web application from the Google Developer
-     * Console. In your Developer Console project, add a JavaScript origin
-     * that corresponds to the domain from where you will be running the
-     * script.
+     * Your client ID, found in the API Console -> API Access -> Client ID for
+     * web applications -> Client ID
+     * Please see the README for creation details, if you do not currently have
+     a client ID.
      */
     var clientId = 'YOUR_CLIENT_ID';
 
@@ -44,6 +44,8 @@
      * steps:
      * 1) Visit https://code.google.com/apis/console/?api=compute
      * 2) Click on "API Access" in the left column
+     * 3) Scroll to the bottom of the page and select Simple API Access -> Key
+     * for browser apps (with referers) -> API Key
      */
     var apiKey = 'YOUR_API_KEY';
 
@@ -57,7 +59,7 @@
      * Constants for request parameters.
      */
     var API_VERSION = 'v1beta12';
-    var DEFAULT_PROJECT = project;
+    var DEFAULT_PROJECT = projectId;
     var GOOGLE_PROJECT = 'google';
     var DEFAULT_NAME = 'new-node';
     var DEFAULT_NAME_WITH_METADATA = 'new-node-with-metadata';
