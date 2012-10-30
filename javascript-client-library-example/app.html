@@ -58,7 +58,7 @@
     /**
      * Constants for request parameters.
      */
-    var API_VERSION = 'v1beta12';
+    var API_VERSION = 'v1beta13';
     var DEFAULT_PROJECT = projectId;
     var GOOGLE_PROJECT = 'google';
     var DEFAULT_NAME = 'new-node';
@@ -68,7 +68,7 @@
     var DEFAULT_IMAGE = BASE_URL + GOOGLE_PROJECT +
       '/images/ubuntu-12-04-v20120912';
     var DEFAULT_MACHINE_TYPE = BASE_URL + DEFAULT_MACHINE_TYPE +
-      '/machine-types/n1-standard-1';
+      '/machineTypes/n1-standard-1';
     var DEFAULT_NETWORK = BASE_URL + DEFAULT_PROJECT + '/networks/default';
     var DEFAULT_ZONE = BASE_URL + DEFAULT_PROJECT + '/zones/us-east1-a';
     var DEFAULT_FILTER_OPERATION = 'operationType eq insert';
@@ -535,10 +535,10 @@
     }
 
     /**
-     * Load Google Compute Engine API v1beta12.
+     * Load the Google Compute Engine API.
      */
     function initializeApi() {
-      gapi.client.load('compute', 'v1beta12');
+      gapi.client.load('compute', API_VERSION);
     }
 
     /**
