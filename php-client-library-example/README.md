@@ -1,8 +1,22 @@
+# Copyright 2012 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Google Compute Engine PHP Sample Application
 
 == Description
-This is a simple web-based example of calling Google Compute Engine APIs in
-PHP.
+This is a simple web-based example of calling the Google Compute Engine API
+in PHP.
 
 ## Prerequisites:
 Please make sure that all of the following is installed before trying to run
@@ -14,27 +28,30 @@ the sample application.
 - The google-api-php-client library checked out locally
 
 ## Setup Authentication
-  1) Visit https://code.google.com/apis/console/?api=compute to register
-  your application.
-    - From the "Project Home" screen, activate access to "Google Compute
-    Engine API".
+  NOTE: This README assumes that you have enabled access to the Google Compute
+  Engine API via the Google API Console page.
+
+  1) Visit https://code.google.com/apis/console/?api=compute to register your
+  application.
     - Click on "API Access" in the left column
-    - Click the button labeled "Create an OAuth2 client ID"
+    - Click the button labeled "Create an OAuth2 client ID..." if you have not
+      generated any client IDs, or "Create another client ID..." if you have
     - Give your application a name and click "Next"
     - Select "Web Application" as the "Application type"
     - Click "Create client ID"
-    - Click "Edit..." for your new client ID
-    - Under the callback URL, enter the location of your PHP application.
+    - Click "Edit settings..." for your new client ID
+    - Under the redirect URI, enter the location of your JavaScript application
+    - Click "Update"
 
   2) Update app.php with the redirect uri, consumer key, secret, and developer
   key obtained in step 1.
-    - Update 'insert_your_oauth2_client_id' with your oauth2 client id.
-    - Update 'insert_your_oauth2_client_secret' with your oauth2 client secret.
-    - Update 'insert_your_oauth2_redirect_uri' with the fully qualified
+    - Update 'YOUR_CLIENT_ID' with your oauth2 client id.
+    - Update 'YOUR_CLIENT_SECRET' with your oauth2 client secret.
+    - Update 'YOUR_REDIRECT_URI' with the fully qualified
     redirect URI.
-    - Update 'insert_your_developer_key' with your developer key.
-    This is listed under "Simple API Access" at the very bottom in the Google
-    API Console.
+    - Update 'YOUR_DEVELOPER_KEY' with your developer key.
+    This is listed under "Simple API Access" at the very bottom of the page,
+    in the Google API Console.
 
 ## Running the Sample Application
   3) Load app.php on your web server, and visit the appropriate website in
