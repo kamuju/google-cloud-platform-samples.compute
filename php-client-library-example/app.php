@@ -54,7 +54,7 @@ define('DEFAULT_PROJECT', $project);
 define('DEFAULT_NAME', 'new-node');
 define('DEFAULT_NAME_WITH_METADATA', 'new-node-with-metadata');
 define('DEFAULT_MACHINE_TYPE', BASE_URL . DEFAULT_PROJECT .
-  '/machine-types/n1-standard-1');
+  '/machineTypes/n1-standard-1');
 define('DEFAULT_ZONE', BASE_URL . DEFAULT_PROJECT . '/zones/us-central1-a');
 define('DEFAULT_IMAGE', BASE_URL . GOOGLE_PROJECT .
   '/images/ubuntu-12-04-v20120912');
@@ -121,13 +121,6 @@ if ($client->getAccessToken()) {
    */
   $instances = $computeService->instances->listInstances(DEFAULT_PROJECT);
   $instancesListMarkup = generateMarkup('List Instances', $instances);
-
-  /**
-   * Google Compute Engine API request to retrieve the list of all operations
-   * associated with your Google Compute Engine project.
-   */
-  $operations = $computeService->operations->listOperations(DEFAULT_PROJECT);
-  $operationsListMarkup = generateMarkup('List Operations', $operations);
 
   /**
    * Google Compute Engine API request to retrieve the list of all data center
@@ -254,6 +247,13 @@ if ($client->getAccessToken()) {
   $deleteInstanceWithMetadataMarkup = generateMarkup(
     'Delete Instance With Metadata', $deleteInstanceWithMetadata);
 
+  /**
+   * Google Compute Engine API request to retrieve the list of all operations
+   * associated with your Google Compute Engine project.
+   */
+  $operations = $computeService->operations->listOperations(DEFAULT_PROJECT);
+  $operationsListMarkup = generateMarkup('List Operations', $operations);
+
   // The access token may have been updated lazily.
   $_SESSION['access_token'] = $client->getAccessToken();
 } else {
@@ -270,10 +270,6 @@ if ($client->getAccessToken()) {
     <div class="main-content">
       <?php if(isset($instancesListMarkup)): ?>
         <div id="listInstances"><?php print $instancesListMarkup ?></div>
-      <?php endif ?>
-
-      <?php if(isset($operationsListMarkup)): ?>
-        <div id="listOperations"><?php print $operationsListMarkup ?></div>
       <?php endif ?>
 
       <?php if(isset($zonesListMarkup)): ?>
@@ -324,6 +320,10 @@ if ($client->getAccessToken()) {
         <div id="insertInstanceWithMetadata">
           <?php print $insertInstanceWithMetadataMarkup?>
         </div>
+      <?php endif ?>
+
+      <?php if(isset($operationsListMarkup)): ?>
+        <div id="listOperations"><?php print $operationsListMarkup ?></div>
       <?php endif ?>
 
       <?php
